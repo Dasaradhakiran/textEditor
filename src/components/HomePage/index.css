@@ -11,6 +11,7 @@
   padding: 15px;
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 
 .text {
@@ -25,14 +26,14 @@
 }
 .right-cont {
   background-color: #25262c;
-  height: 70vh;
+  height: 60vh;
   width: 30vw;
   border-radius: 10px;
   margin-left: 10px;
   border: 1px solid #334155;
 }
 .left-cont {
-  height: 70vh;
+  height: 60vh;
   width: 30vw;
   display: flex;
   flex-direction: column;
@@ -47,4 +48,89 @@
 }
 .li-elem {
   list-style-type: none;
+}
+.btn-icon {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .img-elem {
+    width: 100px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .left-cont {
+    height: 40vh;
+  }
+  .right-cont {
+    height: 40vh;
+  }
+  .main-cont {
+    padding: 0px;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+  .btn-icon {
+    font-size: 15px;
+  }
+  .btn-cont {
+    padding: 5px;
+    margin: 0px;
+  }
+  .sub-cont {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+  .img-elem {
+    width: 350px;
+  }
+  .text {
+    font-size: 40px;
+  }
+  .left-cont {
+    height: 50vh;
+  }
+  .right-cont {
+    height: 50vh;
+  }
+  .main-cont {
+    padding: 0px;
+  }
+  .btn-icon {
+    font-size: 40px;
+  }
+  .sub-cont {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  .img-elem {
+    width: 650px;
+  }
+  .text {
+    font-size: 60px;
+  }
+  .left-cont {
+    height: 60vh;
+  }
+  .right-cont {
+    height: 60vh;
+    border: 5px solid #334155;
+  }
+  .main-cont {
+    padding: 0px;
+  }
+  .btn-icon {
+    font-size: 60px;
+  }
+  .btn-cont {
+    border-bottom: 5px solid #334155;
+  }
+  .sub-cont {
+    padding: 50px;
+  }
 }

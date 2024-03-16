@@ -1,9 +1,10 @@
 import {Component} from 'react'
-import styled from 'styled-components'
 import {VscBold} from 'react-icons/vsc'
 import {GoItalic} from 'react-icons/go'
 import {AiOutlineUnderline} from 'react-icons/ai'
 import './index.css'
+
+import {Button, TextArea} from '../StyledComponents'
 
 export default class HomePage extends Component {
   state = {
@@ -32,25 +33,6 @@ export default class HomePage extends Component {
   render() {
     const {boldActive, italicActive, underLineActive, textInput} = this.state
 
-    const Button = styled.button`
-      background-color: transparent;
-      color: ${props => props.color};
-      border: 0px;
-      cursor: pointer;
-      outline: none;
-    `
-    const TextArea = styled.textarea`
-      background-color: transparent;
-      border: 0px;
-      padding: 10px;
-      outline: none;
-      font-size: 15px;
-      color: #f8fafc;
-      font-weight: ${boldActive ? 'bold' : 'normal'};
-      font-style: ${italicActive ? 'italic' : 'normal'};
-      text-decoration: ${underLineActive ? 'underline' : 'none'};
-    `
-
     return (
       <div className="main-cont">
         <div className="sub-cont">
@@ -71,7 +53,7 @@ export default class HomePage extends Component {
                   onClick={this.boldClick}
                   data-testid="bold"
                 >
-                  <VscBold size={25} />
+                  <VscBold className="btn-icon" />
                 </Button>
               </li>
               <li className="li-elem">
@@ -81,7 +63,7 @@ export default class HomePage extends Component {
                   onClick={this.italicClick}
                   data-testid="italic"
                 >
-                  <GoItalic size={25} />
+                  <GoItalic className="btn-icon" />
                 </Button>
               </li>
               <li className="li-elem">
@@ -91,7 +73,7 @@ export default class HomePage extends Component {
                   onClick={this.underLineClick}
                   data-testid="underline"
                 >
-                  <AiOutlineUnderline size={25} />
+                  <AiOutlineUnderline className="btn-icon" />
                 </Button>
               </li>
             </ul>
@@ -101,6 +83,9 @@ export default class HomePage extends Component {
               value={textInput}
               onChange={this.onChangeText}
               name="postContent"
+              boldActive={boldActive}
+              italicActive={italicActive}
+              underLineActive={underLineActive}
             />
           </div>
         </div>
